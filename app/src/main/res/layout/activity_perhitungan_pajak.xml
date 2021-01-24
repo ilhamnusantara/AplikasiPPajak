@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerhitunganPajak">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-92dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/logo_sidoarjo" />
+
+        <TextView
+            android:id="@+id/tJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Perhitungan Pajak"
+            android:textAlignment="center"
+            android:textColor="#FFB266"
+            android:textSize="12pt"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tJudul1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kabupaten Sidoarjo"
+            android:textAlignment="center"
+            android:textColor="#FFB266"
+            android:textSize="10pt"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tNominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="55dp"
+            android:text="Nominal Belanja"
+            android:textColor="#000000"
+            android:textSize="8pt"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/nHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="25dp"
+            android:ems="8"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bDpp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:text="DPP"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bPPN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:text="PPN" />
+
+            <Button
+                android:id="@+id/bPPh21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:onClick="onClickPPh21"
+                android:text="PPh21"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bPPh22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:text="PPh22"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bPPh23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:text="PPh23" />
+
+            <Button
+                android:id="@+id/bPResto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:text="P.Resto" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai "
+            android:textColor="#000000"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:id="@+id/nHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10pt"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textColor="#000000"
+            android:background="#FFFFCC"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

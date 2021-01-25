@@ -1,150 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InformasiPajak">
-
-    <LinearLayout
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        tools:context=".InformasiPajak">
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="40dp"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/logo_sidoarjo" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="10dp">
 
-        <TextView
-            android:id="@+id/tJudul"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Informasi Perhitungan Pajak"
-            android:textAlignment="center"
-            android:textColor="#FFB266"
-            android:textSize="12pt"
-            android:typeface="sans" />
 
-        <TextView
-            android:id="@+id/tJudul1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kabupaten Sidoarjo"
-            android:textAlignment="center"
-            android:textColor="#FFB266"
-            android:textSize="10pt"
-            android:typeface="sans" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="100dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/logo_sidoarjo" />
 
-        <TextView
-            android:id="@+id/tDPP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="25dp"
-            android:background="#CCFF99"
-            android:text="=> DPP"
-            android:textColor="#000" />
+            <TextView
+                android:id="@+id/tJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Informasi Perhitungan Pajak"
+                android:textAlignment="center"
+                android:textColor="#FFB266"
+                android:textSize="12pt"
+                android:typeface="sans" />
 
-        <TextView
-            android:id="@+id/pDPP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textColor="#000"
-            android:background="#E5FFCC"
-            android:justificationMode="inter_word"
-            android:text="Dasar Pengenaan Pajak dengan berdasarkan peraturan undang-undang yang berlaku."/>
-        <TextView
-            android:id="@+id/rDPP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:background="#E5FFCC"
-            android:text="Rumus perhitungan DPP = nominal * 100 / 110" />
+            <TextView
+                android:id="@+id/tJudul1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kabupaten Sidoarjo"
+                android:textAlignment="center"
+                android:textColor="#FFB266"
+                android:textSize="10pt"
+                android:typeface="sans" />
 
-        <TextView
-            android:id="@+id/tPPN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="25dp"
-            android:background="#99CCFF"
-            android:text="=> PPN"
-            android:textColor="#000" />
+            <TextView
+                android:id="@+id/tDPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCFF99"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="DPP"
+                android:textColor="#000" />
 
-        <TextView
-            android:id="@+id/pPPN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textColor="#000"
-            android:background="#CCE5FF"
-            android:justificationMode="inter_word"
-            android:text="Pajak Pertambahan Nilai adalah pungutan yang dibebankan atas transaksi jual-beli barang dan jasa. Jika pribadi atau instansi pemerintahan melakukan belanja diatas 1 juta rupiah maka dikenakan pembayaran PPN"/>
-        <TextView
-            android:id="@+id/rPPN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:background="#CCE5FF"
-            android:text="Rumus perhitungan PPN = DPP * 10%" />
+            <TextView
+                android:id="@+id/pDPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#E5FFCC"
+                android:justificationMode="inter_word"
+                android:text="Dasar Pengenaan Pajak dengan berdasarkan peraturan undang-undang yang berlaku."
+                android:textColor="#000" />
 
-        <TextView
-            android:id="@+id/tPPh21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="25dp"
-            android:background="#FFCC99"
-            android:text="=> PPH21"
-            android:textColor="#000" />
+            <TextView
+                android:id="@+id/rDPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#E5FFCC"
+                android:text="Rumus perhitungan DPP = nominal * 100 / 110"
+                android:textColor="#000"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/pPPh21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textColor="#000"
-            android:background="#FFE5CC"
-            android:justificationMode="inter_word"
-            android:text="Pajak Penghasilan Pasal 21 atas Penghasilan yang menjadi beban Anggaran Pendapatan dan Belanja Negara, menetapkan bagi Pejabat Negara, PNS, Anggota TNI, Anggota POLRI dan Pensiunan."/>
-        <TextView
-            android:id="@+id/rPPh21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:background="#FFE5CC"
-            android:justificationMode="inter_word"
-            android:text="Rumus perhitungan DPP : Gol I&amp;II (0% dari pengahasilan bruto), Gol III (5% dari penghasilan bruto), Gol IV (15% dari penghasilan bruto)" />
+            <TextView
+                android:id="@+id/tPPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:background="#99CCFF"
+                android:text="PPN"
+                android:textColor="#000" />
 
-        <Button
-            android:id="@+id/bNext"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="92dp"
-            android:layout_marginTop="15dp"
-            android:background="#00FF00"
-            android:text=">" />
+            <TextView
+                android:id="@+id/pPPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCE5FF"
+                android:justificationMode="inter_word"
+                android:text="Pajak Pertambahan Nilai adalah pungutan yang dibebankan atas transaksi jual-beli barang dan jasa. Jika pribadi atau instansi pemerintahan melakukan belanja diatas 1 juta rupiah maka dikenakan pembayaran PPN"
+                android:textColor="#000" />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/rPPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCE5FF"
+                android:text="Rumus perhitungan PPN = DPP * 10%"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tPPh21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFCC99"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="PPH21"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/pPPh21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFE5CC"
+                android:justificationMode="inter_word"
+                android:text="Pajak Penghasilan Pasal 21 atas Penghasilan yang menjadi beban Anggaran Pendapatan dan Belanja Negara, menetapkan bagi Pejabat Negara, PNS, Anggota TNI, Anggota POLRI dan Pensiunan."
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/rPPh21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFE5CC"
+                android:justificationMode="inter_word"
+                android:text="Rumus perhitungan PPh21 : Gol I&amp;II (0% dari pengahasilan bruto), Gol III (5% dari penghasilan bruto), Gol IV (15% dari penghasilan bruto)"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tPPh22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="#6666FF"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="PPH22"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/pPPh22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#9999FF"
+                android:justificationMode="inter_word"
+                android:text="Pajak Penghasilan Pasal 22 yang dibebankan kepada belanja negara/daerah minimal sebesar sebesar 2.000.000 keatas."
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/rPPh22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#9999FF"
+                android:justificationMode="inter_word"
+                android:text="Rumus perhitungan PPh22 = PPN * 15%"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tPPh23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFB266"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="PPH23"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/pPPh23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFCC99"
+                android:justificationMode="inter_word"
+                android:text="Pajak Penghasilan Pasal 23 yang dibebankan kepada belanja negara/daerah atas belanja jasa."
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/rPPh23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFCC99"
+                android:justificationMode="inter_word"
+                android:text="Rumus perhitungan PPh23 = Nominal Belanja * 2%"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tPResto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="#66FF66"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Pajak Restoran"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/pResto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#99FF99"
+                android:justificationMode="inter_word"
+                android:text="Dasar pengenaan Pajak Restoran adalah jumlah pembayaran yang diterima atau seharusnya diterima restoran"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/rPResto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="45dp"
+                android:background="#99FF99"
+                android:justificationMode="inter_word"
+                android:text="Rumus perhitungan Pajak Restor = DPP * 10%"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

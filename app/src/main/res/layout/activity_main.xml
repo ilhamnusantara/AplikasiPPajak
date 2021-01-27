@@ -6,79 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/illustration_2" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="4dp"
+        android:backgroundTint="#FFFFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="40dp"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/logo_sidoarjo" />
-
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Selamat Datang"
-            android:textAlignment="center"
-            android:textColor="#FFB266"
-            android:textSize="10pt"
-            android:typeface="sans" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="di Aplikasi Perhitungan Pajak"
-            android:textAlignment="center"
-            android:textColor="#FFB266"
-            android:textSize="10pt"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="110dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/gladtoseeu"
+            android:textAlignment="textStart"
+            android:textColor="#656464"
+            android:textSize="8pt"
+            android:textStyle="bold"
             android:typeface="sans" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kabupaten Sidoarjo"
+            android:layout_height="68dp"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/klikpajak"
             android:textAlignment="center"
-            android:textColor="#FFB266"
-            android:textSize="12pt"
+            android:textColor="#673AB7"
+            android:textSize="20pt"
             android:textStyle="bold"
             android:typeface="sans" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/bPp"
+            android:layout_width="246dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="310dp"
+            android:scaleType="centerInside"
+            android:text="@string/perhitungan_pajak"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bInform"
+            android:layout_width="246dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:text="@string/informasi_perhitungan"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bPp"
-                android:layout_width="146dp"
-                android:layout_height="62dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="80dp"
-                android:scaleType="centerInside"
-                android:text="Perhitungan Pajak"
-                android:textAllCaps="false" />
-            <Button
-                android:id="@+id/bInform"
-                android:layout_width="146dp"
-                android:layout_height="62dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="80dp"
-                android:scaleType="centerInside"
-                android:text="Informasi Perhitungan"
-                android:textAllCaps="false" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/callhelp"
+            android:textAlignment="center"
+            android:textColor="#656464"
+            android:textSize="6pt"
+            android:textStyle="bold"
+            android:typeface="sans" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

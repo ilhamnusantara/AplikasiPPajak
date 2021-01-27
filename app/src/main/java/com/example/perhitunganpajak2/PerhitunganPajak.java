@@ -56,7 +56,7 @@ public class PerhitunganPajak extends AppCompatActivity {
         btPPh21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                openActivity2();
+                PPph21();
             }
         });
 
@@ -96,7 +96,7 @@ public class PerhitunganPajak extends AppCompatActivity {
             }
         });
     }
-    public void Pph21(){
+    public void PPph21(){
         Intent i =new Intent(this, Pph21Golongan.class);
         startActivity(i);
     }

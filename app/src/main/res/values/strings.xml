@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PerhitunganPajak2</string>
+    <string name="klikpajak">KlikPajak!</string>
+    <string name="perhitungan_pajak">Perhitungan Pajak</string>
+    <string name="informasi_perhitungan">Informasi Perhitungan</string>
+    <string name="gladtoseeu">Selamat datang di,</string>
+    <string name="callhelp">Bantuan? Telfon KPP.</string>
 </resources>

@@ -2,6 +2,7 @@ package com.example.perhitunganpajak2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -94,5 +95,9 @@ public class PerhitunganPajak extends AppCompatActivity {
                 nhasil.setText(""+df.format(presto));
             }
         });
+    }
+    public void Pph21(){
+        Intent i =new Intent(this, Pph21Golongan.class);
+        startActivity(i);
     }
 }

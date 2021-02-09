@@ -1,84 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/illustration_2" />
-
-    <LinearLayout
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="#FFFFFF"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/textView4"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="85dp"
-            android:layout_marginTop="110dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="@string/gladtoseeu"
-            android:textAlignment="textStart"
-            android:textColor="#656464"
-            android:textSize="8pt"
-            android:textStyle="bold"
-            android:typeface="sans" />
+            android:layout_height="631dp"
+            android:backgroundTint="#FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_goneMarginBottom="15dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:layout_marginTop="-10dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/klikpajak"
-            android:textAlignment="center"
-            android:textColor="#673AB7"
-            android:textSize="20pt"
-            android:textStyle="bold"
-            android:typeface="sans" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/gladtoseeu"
+                android:textAlignment="textStart"
+                android:textColor="#656464"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:typeface="sans" />
 
-        <Button
-            android:id="@+id/bPp"
-            android:layout_width="246dp"
-            android:layout_height="62dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="310dp"
-            android:scaleType="centerInside"
-            android:text="@string/perhitungan_pajak"
-            android:textAllCaps="false" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/klikpajak"
+                android:textAlignment="center"
+                android:textColor="#673AB7"
+                android:textSize="20pt"
+                android:textStyle="bold"
+                android:typeface="sans" />
 
-        <Button
-            android:id="@+id/bInform"
-            android:layout_width="246dp"
-            android:layout_height="62dp"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:text="@string/informasi_perhitungan"
-            android:textAllCaps="false" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/illustration_2" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="@string/callhelp"
-            android:textAlignment="center"
-            android:textColor="#656464"
-            android:textSize="6pt"
-            android:textStyle="bold"
-            android:typeface="sans" />
+            <Button
+                android:id="@+id/bPp"
+                android:layout_width="246dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:text="@string/perhitungan_pajak"
+                android:textAllCaps="false" />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/bInform"
+                android:layout_width="246dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:text="@string/informasi_perhitungan"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/callhelp"
+                android:textAlignment="center"
+                android:textColor="#656464"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

@@ -1,105 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Pph21Golongan">
 
-    <LinearLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView3"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="#000000"
-            android:text="Nominal Belanja"
-            android:textSize="10pt" />
+            tools:context=".Pph21Golongan">
 
-        <EditText
-            android:id="@+id/nHonor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="25dp"
-            android:ems="8"
-            android:inputType="numberSigned|numberDecimal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="659dp"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
-        <Button
-            android:id="@+id/bGol1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:text="Golongan I/II" />
 
-        <Button
-            android:id="@+id/bGol3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:text="Golongan III" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="110dp"
+                    android:text="Nominal Belanja"
+                    android:textColor="#000000"
+                    android:textSize="10pt" />
 
-        <Button
-            android:id="@+id/bGol4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:text="Golongan IV" />
+                <TextView
+                    android:id="@+id/nHonor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="25dp"
+                    android:background="#CCFF99"
+                    android:textColor="#000000"
+                    android:ems="8"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="10pt" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="#000000"
-            android:text="Jumlah Potongan Honor"
-            android:textSize="10pt" />
+                <Button
+                    android:id="@+id/bGol1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginRight="100dp"
+                    android:text="Golongan I/II" />
 
-        <TextView
-            android:id="@+id/nPotangan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="10pt"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textColor="#000000"
-            android:background="#FFFFCC"/>
+                <Button
+                    android:id="@+id/bGol3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="100dp"
+                    android:text="Golongan III" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="#000000"
-            android:text="Jumlah Bersih yang diterima"
-            android:textSize="10pt" />
+                <Button
+                    android:id="@+id/bGol4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="100dp"
+                    android:text="Golongan IV" />
 
-        <TextView
-            android:id="@+id/nHasil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="10pt"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:textColor="#000000"
-            android:background="#FFFFCC"/>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="80dp"
+                    android:text="Jumlah Potongan Honor"
+                    android:textColor="#000000"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:id="@+id/nPotangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="25dp"
+                    android:background="#FFFFCC"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Jumlah Bersih yang diterima"
+                    android:textColor="#000000"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:id="@+id/nHasil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="25dp"
+                    android:background="#FFFFCC"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="10pt" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+

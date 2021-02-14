@@ -10,8 +10,7 @@ import android.widget.*;
 import java.text.DecimalFormat;
 
 public class Pph21Golongan extends AppCompatActivity {
-    private Button bGol, bGol3, bGol4;
-//    private TextView Nominal;
+    private Button bGol, bGol3, bGol4, nonPns;
     private TextView nHasil, nPotongan, Nominal;
     double a,b,c;
     @Override
@@ -23,6 +22,7 @@ public class Pph21Golongan extends AppCompatActivity {
         bGol = findViewById(R.id.bGol1);
         bGol3 = findViewById(R.id.bGol3);
         bGol4 = findViewById(R.id.bGol4);
+        nonPns = findViewById(R.id.nonPns);
         Nominal = findViewById(R.id.nHonor);
         nHasil = findViewById(R.id.nHasil);
         nPotongan = findViewById(R.id.nPotangan);
@@ -37,7 +37,7 @@ public class Pph21Golongan extends AppCompatActivity {
             public void onClick(View v) {
                 b = bawa * 0 / 100;
                 c = bawa-b;
-                DecimalFormat df = new DecimalFormat("#,###,###");
+                DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
             }
@@ -48,7 +48,7 @@ public class Pph21Golongan extends AppCompatActivity {
             public void onClick(View v) {
                 b = bawa * 5 / 100;
                 c = bawa-b;
-                DecimalFormat df = new DecimalFormat("#,###,###");
+                DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
             }
@@ -59,10 +59,22 @@ public class Pph21Golongan extends AppCompatActivity {
             public void onClick(View v) {
                 b = bawa * 15 / 100;
                 c = bawa-b;
-                DecimalFormat df = new DecimalFormat("#,###,###");
+                DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
             }
         });
+
+        nonPns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b = bawa * 5 / 100;
+                c = bawa-b;
+                DecimalFormat df = new DecimalFormat("#,###,###.##");
+                nPotongan.setText(""+df.format(b));
+                nHasil.setText(""+df.format(c));
+            }
+        });
+
     }
 }

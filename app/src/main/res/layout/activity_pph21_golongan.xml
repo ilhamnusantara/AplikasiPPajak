@@ -8,11 +8,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bgnewstyle"
             tools:context=".Pph21Golongan">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="659dp"
+                android:layout_height="859dp"
                 android:orientation="vertical"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp"
@@ -70,6 +71,14 @@
                     android:layout_marginRight="100dp"
                     android:text="Golongan IV" />
 
+                <Button
+                    android:id="@+id/nonPns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="100dp"
+                    android:text="Non PNS Kegiatan" />
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"

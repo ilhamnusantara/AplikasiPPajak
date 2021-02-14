@@ -23,6 +23,9 @@
             android:name=".Pph21Golongan"
             android:parentActivityName=".PerhitunganPajak"/>
         <activity
+            android:name=".PphFinal"
+            android:parentActivityName=".PerhitunganPajak"/>
+        <activity
             android:name=".InformasiPajak"
             android:parentActivityName=".MainActivity" />
     </application>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="200dp"
+    android:background="@drawable/bgnewstyle"
+    android:padding="10dp"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/tKros"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="#FFFF"
+        android:text="X"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/cerclebg"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apakah Penyedia memiliki NPWP ?"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bNpwp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NPWP"
+            android:background="@drawable/buttonstyle"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/bTNpwp"
+            android:layout_width="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tanpa NPWP"
+            android:background="@drawable/buttonstyle"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

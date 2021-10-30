@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
 
 public class Pph21Golongan extends AppCompatActivity {
     private Button bGol, bGol3, bGol4, nonPns;
-    private TextView nHasil, nPotongan, Nominal;
+    private TextView nHasil, nPotongan, Nominal, tPot, tHas;
     double a,b,c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class Pph21Golongan extends AppCompatActivity {
         bGol3 = findViewById(R.id.bGol3);
         bGol4 = findViewById(R.id.bGol4);
         nonPns = findViewById(R.id.nonPns);
+        tPot = findViewById(R.id.tPot);
+        tHas = findViewById(R.id.tHas);
         Nominal = findViewById(R.id.nHonor);
         nHasil = findViewById(R.id.nHasil);
         nPotongan = findViewById(R.id.nPotangan);
@@ -40,6 +42,8 @@ public class Pph21Golongan extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
+                tPot.setText("Jumlah Potongan Honor Gol I/II");
+                tHas.setText("Jumlah Bersih yang diterima Gol I/II ");
             }
         });
 
@@ -51,6 +55,8 @@ public class Pph21Golongan extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
+                tPot.setText("Jumlah Potongan Honor Gol III");
+                tHas.setText("Jumlah Bersih yang diterima Gol III ");
             }
         });
 
@@ -62,6 +68,8 @@ public class Pph21Golongan extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
+                tPot.setText("Jumlah Potongan Honor Gol IV");
+                tHas.setText("Jumlah Bersih yang diterima Gol IV ");
             }
         });
 
@@ -73,6 +81,8 @@ public class Pph21Golongan extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat("#,###,###.##");
                 nPotongan.setText(""+df.format(b));
                 nHasil.setText(""+df.format(c));
+                tPot.setText("Jumlah Potongan Honor non ASN");
+                tHas.setText("Jumlah Bersih yang diterima non ASN ");
             }
         });
 

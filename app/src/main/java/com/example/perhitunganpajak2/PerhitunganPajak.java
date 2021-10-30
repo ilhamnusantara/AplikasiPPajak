@@ -2,7 +2,10 @@ package com.example.perhitunganpajak2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -19,18 +22,20 @@ public class PerhitunganPajak extends AppCompatActivity {
     private TextView kalimat, nhasil, show;
     private Button btDPP, btPPN, btPPh21,btPPh22,btPPh23, btPPhFinal ,btPResto;
     double angka,dpp,ppn,pph21,pph22,pph23,presto,panci;
+    Dialog myDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perhitungan_pajak);
 
+        myDialog = new Dialog(this);
         nom = findViewById(R.id.nHarga);
         show = findViewById(R.id.show);
         btDPP = findViewById(R.id.bDpp);
         btPPN = findViewById(R.id.bPPN);
         btPPh21 = findViewById(R.id.bPPh21);
         btPPh22 = findViewById(R.id.bPPh22);
-        btPPh23 = findViewById(R.id.bPPh23);
+//        btPPh23 = findViewById(R.id.bPPh23);
         btPPhFinal = findViewById(R.id.bFinal);
         btPResto = findViewById(R.id.bPResto);
         kalimat = findViewById(R.id.Hasil);
@@ -116,39 +121,39 @@ public class PerhitunganPajak extends AppCompatActivity {
             }
         });
 
-        btPPh22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (TextUtils.isEmpty(nom.getText().toString())){
-                    Toast.makeText(PerhitunganPajak.this, "Nominal tidak boleh kosong ya zheyeng...", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    angka = Integer.parseInt(nom.getText().toString());
-                    dpp = angka * 100 / 110;
-                    ppn = dpp * 10 / 100;
-                    pph22 = ppn * 15 / 100;
-                    DecimalFormat df = new DecimalFormat("#,###,###.##");
-                    kalimat.setText("Nilai Pajak Penghasilan Pasal 22 yang harus dibayar :");
-                    nhasil.setText(""+df.format(pph22));
-                }
-            }
-        });
+//        btPPh22.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (TextUtils.isEmpty(nom.getText().toString())){
+//                    Toast.makeText(PerhitunganPajak.this, "Nominal tidak boleh kosong ya zheyeng...", Toast.LENGTH_SHORT).show();
+//                }
+//                else{
+//                    angka = Integer.parseInt(nom.getText().toString());
+//                    dpp = angka * 100 / 110;
+//                    ppn = dpp * 10 / 100;
+//                    pph22 = ppn * 15 / 100;
+//                    DecimalFormat df = new DecimalFormat("#,###,###.##");
+//                    kalimat.setText("Nilai Pajak Penghasilan Pasal 22 yang harus dibayar :");
+//                    nhasil.setText(""+df.format(pph22));
+//                }
+//            }
+//        });
 
-        btPPh23.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (TextUtils.isEmpty(nom.getText().toString())){
-                    Toast.makeText(PerhitunganPajak.this, "Nominal tidak boleh kosong ya zheyeng...", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    angka = Integer.parseInt(nom.getText().toString());
-                    pph23 = angka * 2 / 100;
-                    DecimalFormat df = new DecimalFormat("#,###,###.##");
-                    kalimat.setText("Nilai Pajak Penghasilan Pasal 23 yang harus dibayar :");
-                    nhasil.setText(""+df.format(pph23));
-                }
-            }
-        });
+//        btPPh23.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (TextUtils.isEmpty(nom.getText().toString())){
+//                    Toast.makeText(PerhitunganPajak.this, "Nominal tidak boleh kosong ya zheyeng...", Toast.LENGTH_SHORT).show();
+//                }
+//                else {
+//                    angka = Integer.parseInt(nom.getText().toString());
+//                    pph23 = angka * 2 / 100;
+//                    DecimalFormat df = new DecimalFormat("#,###,###.##");
+//                    kalimat.setText("Nilai Pajak Penghasilan Pasal 23 yang harus dibayar :");
+//                    nhasil.setText(""+df.format(pph23));
+//                }
+//            }
+//        });
 
         btPPhFinal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,5 +204,96 @@ public class PerhitunganPajak extends AppCompatActivity {
         Intent i =new Intent(this, PphFinal.class);
         i.putExtra("nominal", nominal);
         startActivity(i);
+    }
+    public void PPh23Popup(View v){
+        TextView tKros;
+        Button bNpwp, bTNpwp;
+        myDialog.setContentView(R.layout.pph23popup);
+        tKros = (TextView) myDialog.findViewById(R.id.tKros);
+        bNpwp = (Button) myDialog.findViewById(R.id.bNpwp);
+        bTNpwp = (Button) myDialog.findViewById(R.id.bTNpwp);
+        if (TextUtils.isEmpty(nom.getText().toString())){
+            Toast.makeText(PerhitunganPajak.this, "Nominal tidak boleh kosong ya zheyeng...", Toast.LENGTH_SHORT).show();
+        } else {
+
+            bNpwp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    angka = Integer.parseInt(nom.getText().toString());
+                    pph23 = angka * 2 / 100;
+                    DecimalFormat df = new DecimalFormat("#,###,###.##");
+                    kalimat.setText("Nilai Pajak Penghasilan Pasal 23 dengan NPWP yang harus dibayar :");
+                    nhasil.setText(""+df.format(pph23));
+                    myDialog.dismiss();
+                }
+            });
+            bTNpwp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    angka = Integer.parseInt(nom.getText().toString());
+                    pph23 = angka * 4 / 100;
+                    DecimalFormat df = new DecimalFormat("#,###,###.##");
+                    kalimat.setText("Nilai Pajak Penghasilan Pasal 23 tanpa NPWP yang harus dibayar :");
+                    nhasil.setText(""+df.format(pph23));
+                    myDialog.dismiss();
+                }
+            });
+            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            myDialog.show();
+        }
+        tKros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+    }
+
+    public void PPh22Popup(View v){
+        TextView tKros;
+        Button bNpwp, bTNpwp;
+        myDialog.setContentView(R.layout.pph23popup);
+        tKros = (TextView) myDialog.findViewById(R.id.tKros);
+        bNpwp = (Button) myDialog.findViewById(R.id.bNpwp);
+        bTNpwp = (Button) myDialog.findViewById(R.id.bTNpwp);
+        if (TextUtils.isEmpty(nom.getText().toString())){
+            Toast.makeText(PerhitunganPajak.this, "Nominal tidak boleh kosong ya zheyeng...", Toast.LENGTH_SHORT).show();
+        } else {
+
+            bNpwp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    angka = Integer.parseInt(nom.getText().toString());
+                    dpp = angka * 100 / 110;
+                    ppn = dpp * 10 / 100;
+                    pph22 = ppn * 15 / 100;
+                    DecimalFormat df = new DecimalFormat("#,###,###.##");
+                    kalimat.setText("Nilai Pajak Penghasilan Pasal 22 dengan NPWP yang harus dibayar :");
+                    nhasil.setText(""+df.format(pph22));
+                    myDialog.dismiss();
+                }
+            });
+            bTNpwp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    angka = Integer.parseInt(nom.getText().toString());
+                    dpp = angka * 100 / 110;
+                    ppn = dpp * 10 / 100;
+                    pph22 = ppn * 30 / 100;
+                    DecimalFormat df = new DecimalFormat("#,###,###.##");
+                    kalimat.setText("Nilai Pajak Penghasilan Pasal 22 tanpa NPWP yang harus dibayar :");
+                    nhasil.setText(""+df.format(pph22));
+                    myDialog.dismiss();
+                }
+            });
+            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            myDialog.show();
+        }
+        tKros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
     }
 }

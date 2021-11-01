@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Perhitungan Pajak"
+                android:text="Cek Perhitungan Pajak"
                 android:textAlignment="center"
                 android:textColor="#673AB7"
                 android:textSize="10pt"

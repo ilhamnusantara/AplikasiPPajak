@@ -64,7 +64,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:scaleType="centerInside"
-                android:text="@string/perhitungan_pajak"
+                android:text="Cek Perhitungan Pajak"
                 android:textAllCaps="false" />
 
             <Button
@@ -73,7 +73,7 @@
                 android:layout_height="62dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
-                android:text="@string/informasi_perhitungan"
+                android:text="informasi Perhitungan Pajak"
                 android:textAllCaps="false" />
 
             <TextView

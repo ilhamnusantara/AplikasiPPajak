@@ -31,7 +31,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/gladtoseeu"
                 android:textAlignment="textStart"
-                android:textColor="#656464"
+                android:textColor="#FFF"
                 android:textSize="8pt"
                 android:textStyle="bold"
                 android:typeface="sans" />
@@ -44,7 +44,7 @@
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/klikpajak"
                 android:textAlignment="center"
-                android:textColor="#673AB7"
+                android:textColor="#FFF"
                 android:textSize="20pt"
                 android:textStyle="bold"
                 android:typeface="sans" />
@@ -84,7 +84,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/callhelp"
                 android:textAlignment="center"
-                android:textColor="#656464"
+                android:textColor="#476072"
                 android:textSize="6pt"
                 android:textStyle="bold"
                 android:typeface="sans" />

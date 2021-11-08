@@ -28,7 +28,8 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginTop="110dp"
                     android:text="Nominal Belanja"
-                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     android:textSize="10pt" />
 
                 <TextView
@@ -38,7 +39,7 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginRight="25dp"
-                    android:background="#CCFF99"
+                    android:background="#DDDDDD"
                     android:textColor="#000000"
                     android:ems="8"
                     android:inputType="numberSigned|numberDecimal"
@@ -86,7 +87,8 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="80dp"
                     android:text="Jumlah Potongan Honor"
-                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     android:textSize="8pt" />
 
                 <TextView
@@ -96,7 +98,7 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="25dp"
-                    android:background="#FFFFCC"
+                    android:background="#DDDDDD"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="10pt" />
@@ -108,7 +110,8 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:text="Jumlah Bersih yang diterima"
-                    android:textColor="#000000"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     android:textSize="8pt" />
 
                 <TextView
@@ -118,7 +121,7 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="25dp"
-                    android:background="#FFFFCC"
+                    android:background="#DDDDDD"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="10pt" />

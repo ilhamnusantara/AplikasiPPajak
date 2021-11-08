@@ -9,7 +9,13 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
 
+import com.zolad.zoominimageview.ZoomInImageView;
+import com.zolad.zoominimageview.ZoomInImageViewAttacher;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public MainActivity() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

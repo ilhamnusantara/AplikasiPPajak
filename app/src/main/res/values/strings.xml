@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">PerhitunganPajak2</string>
-    <string name="klikpajak">CekPajak!</string>
+    <string name="app_name">CekPajak!</string>
     <string name="perhitungan_pajak">Perhitungan Pajak</string>
     <string name="informasi_perhitungan">Informasi Perhitungan</string>
     <string name="gladtoseeu">Selamat datang di,</string>
@@ -11,4 +10,5 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="login_welcome_1">Selamat datang di,</string>
 </resources>

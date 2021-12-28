@@ -1,4 +1,4 @@
-package com.example.perhitunganpajak2;
+package com.example.cekpajak.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
+
+import com.example.perhitunganpajak2.R;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

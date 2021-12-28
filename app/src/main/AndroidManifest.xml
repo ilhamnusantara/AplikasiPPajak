@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PerhitunganPajak2">
         <activity
-            android:name=".LoginActivity"
+            android:name="com.example.cekpajak.views.LoginActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.cekpajak.views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,17 +20,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PerhitunganPajak"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.example.cekpajak.views.PerhitunganPajak"
+            android:parentActivityName="com.example.cekpajak.views.MainActivity" />
         <activity
-            android:name=".Pph21Golongan"
-            android:parentActivityName=".PerhitunganPajak" />
+            android:name="com.example.cekpajak.views.Pph21Golongan"
+            android:parentActivityName="com.example.cekpajak.views.PerhitunganPajak" />
         <activity
-            android:name=".PphFinal"
-            android:parentActivityName=".PerhitunganPajak" />
+            android:name="com.example.cekpajak.views.PphFinal"
+            android:parentActivityName="com.example.cekpajak.views.PerhitunganPajak" />
         <activity
-            android:name=".InformasiPajak"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.example.cekpajak.views.InformasiPajak"
+            android:parentActivityName="com.example.cekpajak.views.MainActivity" />
     </application>
 
 </manifest>

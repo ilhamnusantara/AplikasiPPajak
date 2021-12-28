@@ -1,4 +1,4 @@
-package com.example.perhitunganpajak2;
+package com.example.cekpajak.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
 
-import com.zolad.zoominimageview.ZoomInImageView;
-import com.zolad.zoominimageview.ZoomInImageViewAttacher;
+import com.example.perhitunganpajak2.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public MainActivity() {

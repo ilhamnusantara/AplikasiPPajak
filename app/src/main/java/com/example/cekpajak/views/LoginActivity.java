@@ -1,8 +1,10 @@
-package com.example.perhitunganpajak2;
+package com.example.cekpajak.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.perhitunganpajak2.R;
 
 public class LoginActivity extends AppCompatActivity {
 

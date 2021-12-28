@@ -11,14 +11,15 @@
         android:theme="@style/Theme.PerhitunganPajak2">
         <activity
             android:name="com.example.cekpajak.views.LoginActivity"
-            android:exported="true" />
-        <activity android:name="com.example.cekpajak.views.MainActivity">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.cekpajak.views.MainActivity"
+            android:parentActivityName="com.example.cekpajak.views.LoginActivity" />
         <activity
             android:name="com.example.cekpajak.views.PerhitunganPajak"
             android:parentActivityName="com.example.cekpajak.views.MainActivity" />

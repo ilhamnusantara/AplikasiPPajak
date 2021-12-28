@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.example.cekpajak.models.User;
 
-public class db extends SQLiteOpenHelper {
+public class Db extends SQLiteOpenHelper {
     //DATABASE NAME
     public static final String DATABASE_NAME = "cekpajak";
 
@@ -36,7 +36,7 @@ public class db extends SQLiteOpenHelper {
             + " ) ";
 
 
-    public db(Context context) {
+    public Db(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -77,7 +77,7 @@ public class db extends SQLiteOpenHelper {
 
     public User Authenticate(User user) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * from " + TABLE_USERS + " where email = " + user.email,null);
+        Cursor cursor = db.rawQuery("SELECT * from " + TABLE_USERS + " where email = " + "'" + user.email + "'",null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
             //if cursor has value then in user database there is user associated with this given email
@@ -95,7 +95,7 @@ public class db extends SQLiteOpenHelper {
 
     public boolean isEmailExists(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT email from " + TABLE_USERS + " where email = " + email,null);
+        Cursor cursor = db.rawQuery("SELECT email from " + TABLE_USERS + " where email = " + "'" + email + "'admin",null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
             //if cursor has value then in user database there is user associated with this given email so return true

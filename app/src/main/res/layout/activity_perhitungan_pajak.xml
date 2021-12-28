@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bgnewstyle"
         tools:context="com.example.cekpajak.views.PerhitunganPajak">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="859dp"
@@ -43,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="KlikPajak!"
+                android:text="CekPajak!"
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="12pt"

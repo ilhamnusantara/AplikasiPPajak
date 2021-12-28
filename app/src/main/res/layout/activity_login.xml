@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgnewstyle"
     android:orientation="vertical"
+
     tools:context="com.example.cekpajak.views.LoginActivity">
     <TextView
         android:id="@+id/textView4"

@@ -1,4 +1,4 @@
-package com.example.perhitunganpajak2;
+package com.example.cekpajak;
 
 import org.junit.Test;
 

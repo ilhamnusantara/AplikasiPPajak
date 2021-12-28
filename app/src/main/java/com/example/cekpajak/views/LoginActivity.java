@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.perhitunganpajak2.R;
+import com.example.cekpajak.R;
 
 public class LoginActivity extends AppCompatActivity {
 

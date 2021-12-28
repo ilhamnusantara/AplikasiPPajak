@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.perhitunganpajak2">
+    package="com.example.cekpajak">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="KlikPajak!"
+        android:label="CekPajak!"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PerhitunganPajak2">
@@ -32,5 +32,6 @@
             android:name="com.example.cekpajak.views.InformasiPajak"
             android:parentActivityName="com.example.cekpajak.views.MainActivity" />
     </application>
+
 
 </manifest>

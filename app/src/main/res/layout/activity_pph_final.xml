@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/bgnewstyle"
         tools:context="com.example.cekpajak.views.PphFinal">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="859dp"

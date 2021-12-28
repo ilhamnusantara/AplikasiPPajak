@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
-import com.example.perhitunganpajak2.R;
+import com.example.cekpajak.R;
 
 import java.text.DecimalFormat;
 

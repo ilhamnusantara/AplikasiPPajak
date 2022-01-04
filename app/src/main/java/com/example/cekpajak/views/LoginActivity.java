@@ -17,6 +17,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class LoginActivity extends AppCompatActivity {
     Db db ;
     Button btnLogin;
+    Button btnRegister;
     EditText emailTxt;
     EditText passwordTxt;
 
@@ -27,13 +28,13 @@ public class LoginActivity extends AppCompatActivity {
 
         db = new Db(this);
         btnLogin = findViewById(R.id.login);
+        btnRegister = findViewById(R.id.register);
         emailTxt =  findViewById(R.id.email);
         passwordTxt = findViewById(R.id.password);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(null,"test");
                 if (validate()) {
 
                     //Get values from EditText fields
@@ -41,11 +42,11 @@ public class LoginActivity extends AppCompatActivity {
                     String Password = passwordTxt.getText().toString();
 
                     //Authenticate user
-                    User currentUser = db.Authenticate(new User(null, null, Email, Password));
+                    User currentUser = db.Authenticate(new User(null, null,null, Email, Password));
 
                     //Check Authentication is successful or not
                     if (currentUser != null) {
-                        Snackbar.make(btnLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(btnLogin, "Login sukses!", Snackbar.LENGTH_LONG).show();
 
                         //User Logged in Successfully Launch You home screen activity
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -55,10 +56,18 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
 
                         //User Logged in Failed
-                        Snackbar.make(btnLogin, "Failed to log in , please try again", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(btnLogin, "Gagal login , silahkan coba lagi!", Snackbar.LENGTH_LONG).show();
 
                     }
                 }
+            }
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -73,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         //Handling validation for Email field
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
-            Snackbar.make(mainLayout, "Please enter valid email!", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(mainLayout, "Email harus diisi!", Snackbar.LENGTH_LONG).show();
         } else {
             valid = true;
         }
@@ -81,13 +90,13 @@ public class LoginActivity extends AppCompatActivity {
         //Handling validation for Password field
         if (Password.isEmpty()) {
             valid = false;
-            Snackbar.make(mainLayout, "Please enter valid password!", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(mainLayout, "Password harus diisi!", Snackbar.LENGTH_LONG).show();
         } else {
             if (Password.length() > 5) {
                 valid = true;
             } else {
                 valid = false;
-                Snackbar.make(mainLayout, "Password is too short!", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(mainLayout, "Password terlalu pendek!", Snackbar.LENGTH_LONG).show();
             }
         }
 

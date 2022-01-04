@@ -10,29 +10,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PerhitunganPajak2">
         <activity
-            android:name="com.example.cekpajak.views.LoginActivity"
+            android:name=".views.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".views.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.example.cekpajak.views.MainActivity"
-            android:parentActivityName="com.example.cekpajak.views.LoginActivity" />
         <activity
-            android:name="com.example.cekpajak.views.PerhitunganPajak"
-            android:parentActivityName="com.example.cekpajak.views.MainActivity" />
+            android:name=".views.MainActivity"
+            android:parentActivityName=".views.LoginActivity" />
         <activity
-            android:name="com.example.cekpajak.views.Pph21Golongan"
-            android:parentActivityName="com.example.cekpajak.views.PerhitunganPajak" />
+            android:name=".views.PerhitunganPajak"
+            android:parentActivityName=".views.MainActivity" />
         <activity
-            android:name="com.example.cekpajak.views.PphFinal"
-            android:parentActivityName="com.example.cekpajak.views.PerhitunganPajak" />
+            android:name=".views.Pph21Golongan"
+            android:parentActivityName=".views.PerhitunganPajak" />
         <activity
-            android:name="com.example.cekpajak.views.InformasiPajak"
-            android:parentActivityName="com.example.cekpajak.views.MainActivity" />
+            android:name=".views.PphFinal"
+            android:parentActivityName=".views.PerhitunganPajak" />
+        <activity
+            android:name=".views.InformasiPajak"
+            android:parentActivityName=".views.MainActivity" />
     </application>
-
 
 </manifest>

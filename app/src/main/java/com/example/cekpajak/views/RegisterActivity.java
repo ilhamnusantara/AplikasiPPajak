@@ -8,13 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.cekpajak.R;
-import com.example.cekpajak.helpers.Db;
+import com.example.cekpajak.helpers.UserHelper;
 import com.example.cekpajak.models.User;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RegisterActivity extends AppCompatActivity {
-    Db db ;
-
+    UserHelper userHelper ;
+    View mainLayout;
     Button btnRegister;
     EditText emailTxt;
     EditText usernameTxt;
@@ -27,44 +27,40 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        View mainLayout = findViewById(R.id.mainLayout);
-        db = new Db(this);
+        userHelper = new UserHelper(this);
+        mainLayout = findViewById(R.id.mainLayout);
         btnRegister = findViewById(R.id.register);
         emailTxt =  findViewById(R.id.email);
         usernameTxt = findViewById(R.id.username);
         companyTxt = findViewById(R.id.company_name);
         passwordTxt = findViewById(R.id.password);
-        secondPasswordTxt = findViewById(R.id.company_name);
+        secondPasswordTxt = findViewById(R.id.second_password);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(validate()){
-                    //Get values from EditText fields
                     String Email = emailTxt.getText().toString();
                     String Username = usernameTxt.getText().toString();
                     String CompanyName = companyTxt.getText().toString();
                     String Password = passwordTxt.getText().toString();
+                    Boolean isExist = userHelper.isEmailExists(Email);
 
-                    Boolean isExist = db.isEmailExists(Email);
                     if (isExist){
                         Snackbar.make(mainLayout, "Email telah terdaftar!", Snackbar.LENGTH_LONG).show();
                     }else{
-                        db.addUser(new User(null, Username,CompanyName, Email, Password));
-                        finish();
+                        userHelper.addUser(new User(null, Username,CompanyName, Email, Password));
                         Snackbar.make(mainLayout, "Berhasil mendaftar!", Snackbar.LENGTH_LONG).show();
+                        finish();
                     }
-
                 }
             }
         });
-
-
     }
 
     public boolean validate(){
         boolean valid = false;
-        //Get values from EditText fields
+
         View mainLayout = findViewById(R.id.mainLayout);
         String Email = emailTxt.getText().toString();
         String Username = usernameTxt.getText().toString();
@@ -72,8 +68,6 @@ public class RegisterActivity extends AppCompatActivity {
         String Password = passwordTxt.getText().toString();
         String SecondPassword = secondPasswordTxt.getText().toString();
 
-
-        //Handling validation for Email field
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
             Snackbar.make(mainLayout, "Email harus diisi!", Snackbar.LENGTH_LONG).show();
@@ -89,7 +83,6 @@ public class RegisterActivity extends AppCompatActivity {
             valid = true;
         }
 
-        //Nama Perusahaan
         if (CompanyName.isEmpty()) {
             valid = false;
             Snackbar.make(mainLayout, "Nama instansi harus diisi!", Snackbar.LENGTH_LONG).show();
@@ -97,22 +90,20 @@ public class RegisterActivity extends AppCompatActivity {
             valid = true;
         }
 
-        //Handling validation for Password field
         if (Password.isEmpty()) {
             valid = false;
             Snackbar.make(mainLayout, "Password harus diisi!", Snackbar.LENGTH_LONG).show();
         } else {
-            if (Password.length() < 5) {
+            if (Password.length() < 6) {
                 valid = false;
                 Snackbar.make(mainLayout, "Password terlalu pendek!", Snackbar.LENGTH_LONG).show();
-            }else if (Password.equals(SecondPassword)){
+            }else if (!Password.equals(SecondPassword)){
                 valid = false;
                 Snackbar.make(mainLayout, "Konfirmasi password tidak sesuai !", Snackbar.LENGTH_LONG).show();
             }else {
                 valid = true;
             }
         }
-
         return valid;
     }
 

@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:hint="Email"
+                android:hint="Konfirmasi Password"
                 android:inputType="textPassword"
                 android:textColor="#757575"
                 tools:text="12345678"

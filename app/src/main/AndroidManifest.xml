@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PerhitunganPajak2">
         <activity
+            android:name=".views.ntpn_data"
+            android:exported="true" />
+        <activity
+            android:name=".views.NtpnActivity"
+            android:exported="true" />
+        <activity
             android:name=".views.RegisterActivity"
             android:exported="true" />
         <activity

@@ -38,7 +38,7 @@ public class PerhitunganPajak extends AppCompatActivity {
         btPPh21 = findViewById(R.id.bPPh21);
         btPPh22 = findViewById(R.id.bPPh22);
 //        btPPh23 = findViewById(R.id.bPPh23);
-        btPPhFinal = findViewById(R.id.bFinal);
+//        btPPhFinal = findViewById(R.id.bFinal);
         btPResto = findViewById(R.id.bPResto);
         kalimat = findViewById(R.id.Hasil);
         nhasil = findViewById(R.id.nHasil);

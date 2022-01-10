@@ -77,6 +77,34 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tIdBilling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="ID Billing : "
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="8pt"
+                    android:typeface="sans" />
+
+                <EditText
+                    android:id="@+id/nIdBilling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:ems="8"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="8pt" />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/show"
                 android:layout_width="match_parent"
@@ -149,27 +177,12 @@
                     android:text="PPh23" />
 
                 <Button
-                    android:id="@+id/bFinal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:scaleType="centerInside"
-                    android:text="Final" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
                     android:id="@+id/bPResto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="250dp"
                     android:scaleType="centerInside"
                     android:text="Resto" />
-
             </LinearLayout>
 
             <TextView

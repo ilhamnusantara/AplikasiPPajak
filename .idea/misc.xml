@@ -9,6 +9,8 @@
         <entry key="app/src/main/res/layout/activity_logic.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_ntpn.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_ntpn_data.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_perhitungan_pajak.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_pph21_golongan.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_pph_final.xml" value="0.23958333333333334" />

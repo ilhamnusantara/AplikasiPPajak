@@ -63,7 +63,16 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:scaleType="centerInside"
-                android:text="Cek Perhitungan Pajak"
+                android:text="Entry Perhitungan Pajak"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnNTPN"
+                android:layout_width="246dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:text="Cek NTPN"
                 android:textAllCaps="false" />
 
             <Button

@@ -176,13 +176,6 @@
                     android:scaleType="centerInside"
                     android:text="PPh23" />
 
-                <Button
-                    android:id="@+id/bPResto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="250dp"
-                    android:scaleType="centerInside"
-                    android:text="Resto" />
             </LinearLayout>
 
             <TextView

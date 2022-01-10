@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btPP = findViewById(R.id.bPp);
         Button btInf = findViewById(R.id.bInform);
+        Button btnNTPN = findViewById(R.id.btnNTPN);
         TextView help = findViewById(R.id.textView5);
 
         btPP.setOnClickListener(this);
         btInf.setOnClickListener(this);
         help.setOnClickListener(this);
+        btnNTPN.setOnClickListener(this);
         
     }
 
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String phoneNumber = new String("03114045");
                 Intent callForHelp = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
                 startActivity(callForHelp);
+                break;
+            case R.id.btnNTPN:
+                Intent ntpnActivity = new Intent(MainActivity.this,NtpnActivity.class);
+                startActivity(ntpnActivity);
+                break;
         }
     }
 }

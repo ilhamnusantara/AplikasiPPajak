@@ -25,6 +25,10 @@ public class UserHelper extends Db{
 
     public UserHelper(Context context) {
         super(context);
+        //Create dummy data
+        this.truncate();
+        User dummyUser = new User(null,"admin","PT.Sejahtera","admin@gmail.com","admin123");
+        this.addUser(dummyUser);
     }
 
     public void addUser(User user) {
@@ -62,5 +66,10 @@ public class UserHelper extends Db{
             return true;
         }
         return false;
+    }
+
+    public void truncate(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 }
